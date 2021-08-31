@@ -33,6 +33,15 @@ function writePalResult(word){
     }
 }
 /**
+ * given a number return 'true' if it's even
+ */
+function isEven(num){
+    if(num%2==0){
+        return true;
+    }
+    return false;
+}
+/**
  * check if the input is formally correct, the result of the game and write it in "gameRes" span
  */
 function checkGameResult(number){
