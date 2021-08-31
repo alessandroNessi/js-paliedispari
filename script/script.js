@@ -21,14 +21,20 @@ function checkPal(word){
     return true;
 }
 /**
- * calls the checkPal function and write the result in the "palRes" span
+ *  calls the checkPal function and write the result in the "palRes" span
  */
 function writePalResult(word){
     if(word!=""){
+        if(word.toLowerCase()=="bird"){
+            var audio = new Audio("media/bird.mp3");
+            audio.play();
+        }
         if(checkPal(word)){
             document.getElementById("palRes").innerHTML="True";
+            document.getElementById("palRes").classList.replace("red","green");
         }else{
             document.getElementById("palRes").innerHTML="False";
+            document.getElementById("palRes").classList.replace("green","red");
         }
     }
 }
@@ -57,16 +63,20 @@ function checkGameResult(number){
             parity=1;
         }else{
             document.getElementById("gameRes").innerHTML="Select a parity!";
+            document.getElementById("gameRes").classList.replace("green","red");
             return;
         }
         console.log("the parity you chose is: "+parity);
         if(number%2==parity){
             document.getElementById("gameRes").innerHTML=" The AI played "+ aiNumber +", the sum is "+ number +", YOU WON!";
+            document.getElementById("gameRes").classList.replace("red","green");
         }else{
             document.getElementById("gameRes").innerHTML=" The AI played "+ aiNumber +", the sum is "+ number +" YOU LOST!";
+            document.getElementById("gameRes").classList.replace("green","red");
         }
     }else{
         document.getElementById("gameRes").innerHTML="The number should be from 1 to 5";
+        document.getElementById("gameRes").classList.replace("green","red");
     }
 }
 //event listener part

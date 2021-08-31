@@ -4,8 +4,23 @@
     box-sizing: border-box;
 }
 #wordInput, #numInput{
-    min-width: 200px;
+    min-width: 250px;
 }
 main *{
     margin: 5px;
+}
+.palindroma_container, .pair_container{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(184, 184, 166);
+}
+.green{
+    color: rgb(0, 120, 0);
+}
+.red{
+    color: rgb(150, 0 , 0);
 }
