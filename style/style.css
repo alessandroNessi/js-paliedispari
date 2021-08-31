@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-#wordInput{
+#wordInput, #numInput{
     min-width: 200px;
+}
+main *{
+    margin: 5px;
 }
